@@ -17,10 +17,12 @@ namespace SistemaUm.Services
         {
             _context = context;
         }
-        public async Task<List<Aluno>> FindAllByAsync()
+
+        public async Task<List<Aluno>> FindAllAsync()
         {
             return await _context.Aluno.ToListAsync();
         }
+
         public async Task InsertAsync(Aluno obj)
         {
             _context.Add(obj);

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SistemaUm.Models;
 using SistemaUm.Services;
+using System.Threading.Tasks;
 
 namespace SistemaUm.Controllers
 {
@@ -19,7 +16,7 @@ namespace SistemaUm.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var list = await _alunoService.FindAllByAsync();
+            var list = await _alunoService.FindAllAsync();
             return View( list);
         }
 
